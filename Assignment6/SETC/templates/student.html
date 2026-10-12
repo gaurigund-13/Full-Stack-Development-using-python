@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks Report</title>
+</head>
+<body>
+    
+    <h1>Student Marks Report</h1>
+    {% for s in results %}
+        <h2>{{ s.name }}</h2>
+        <p>Marks: {{ s.marks }}</p>
+        <p>Total: {{ s.total }}</p>
+        <p>Average: {{ "%.2f"|format(s.average) }}</p>
+        <p>Highest: {{ s.highest }}</p>
+        <p>Lowest: {{ s.lowest }}</p>
+        <hr>
+    {% endfor %}
+    
+</body>
+</html>
