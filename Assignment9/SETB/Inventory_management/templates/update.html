@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Product</title>
+</head>
+<body>
+    
+    <h3>Update Product Quantity</h3>
+
+<form action="/update" method="POST">
+    Product ID:
+    <input type="number" name="Product_ID" min="1" required>
+    <br><br>
+
+    New Quantity:
+    <input type="number" name="Quantity" min="0" required>
+    <br><br>
+
+    <input type="submit" value="Update Quantity">
+</form>
+
+<br>
+
+<a href="/product">View Products</a>
+
+
+</body>
+</html>

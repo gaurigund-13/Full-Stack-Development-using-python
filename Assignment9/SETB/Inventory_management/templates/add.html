@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Add Product</h2>
+
+<form method="POST">
+    Product Name:
+    <input type="text" name="Name" required>
+    <br><br>
+
+    Price:
+    <input type="number" name="Price" step="0.01" min="0" required>
+    <br><br>
+
+    Quantity:
+    <input type="number" name="Quantity" min="0" required>
+    <br><br>
+
+    <input type="submit" value="Add Product">
+</form>
+
+<br>
+<a href="/product">View Product Inventory</a>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Inventory</title>
+</head>
+<body>
+    
+    <h2>Product Inventory</h2>
+
+<table border="1" cellpadding="8">
+    <tr>
+        <th>Product ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+    </tr>
+
+    {% for p in products %}
+    <tr>
+        <td>{{ p[0] }}</td>
+        <td>{{ p[1] }}</td>
+        <td>{{ p[2] }}</td>
+        <td>{{ p[3] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+<a href="/add">Add Product</a>
+<br><br>
+
+<a href="/update">Update Product Quantity</a>
+<br><br>
+
+<a href="/delete">Delete Product</a>
+
+</body>
+</html>

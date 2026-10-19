@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Records</title>
+</head>
+<body>
+
+<h2>Student Records</h2>
+
+<table border="1" cellpadding="8">
+    <tr>
+        <th>Student ID</th>
+        <th>Name</th>
+        <th>Course</th>
+    </tr>
+
+    {% for s in students %}
+    <tr>
+        <td>{{ s[0] }}</td>
+        <td>{{ s[1] }}</td>
+        <td>{{ s[2] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+<a href="/">Add Student</a><br><br>
+<a href="/update">Update Student</a><br><br>
+<a href="/delete">Delete Student</a>
+
+</body>
+</html>

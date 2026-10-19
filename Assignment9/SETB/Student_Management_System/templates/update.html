@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+</head>
+<body>
+    
+    <!-- Update Student Course using ID -->
+
+    <h2>Update Student Course</h2>
+
+    <form method="post">
+
+        Student_ID : 
+        <input type="text" name="Student_ID" min="1" required>
+        <br><br>
+
+        New Course:
+        <input type="text" name="New_Course" required>
+        <br><br>
+
+        <input type="submit" value="Update Course">
+    </form>
+
+    <hr>
+
+    <h2>Student Records</h2>
+
+        <table border="1" cellpadding="8">
+            <tr>
+                <th>Student ID</th>
+                <th>Name</th>
+                <th>Course</th>
+            </tr>
+
+            {% for s in students %}
+            <tr>
+                <td>{{ s[0] }}</td>
+                <td>{{ s[1] }}</td>
+                <td>{{ s[2] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <br>
+        <a href="/">Add Student</a>
+
+</body>
+</html>

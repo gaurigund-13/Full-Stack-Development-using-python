@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Book</title>
+</head>
+<body>
+    
+    <h2>Update Book Price</h2>
+
+<form method="POST">
+    Book ID: <input type="number" name="Book_ID" min="1" required>
+    <br><br>
+
+    New Price: <input type="number" name="Price" step="0.01" min="0" required>
+    <br><br>
+
+    <input type="submit" value="Update Book">
+</form>
+
+<hr>
+
+<h2>Book Records</h2>
+
+<table border="1" cellpadding="8">
+    <tr>
+        <th>Book ID</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Price</th>
+    </tr>
+
+    {% for b in books %}
+    <tr>
+        <td>{{ b[0] }}</td>
+        <td>{{ b[1] }}</td>
+        <td>{{ b[2] }}</td>
+        <td>{{ b[3] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+<a href="/">Add Book</a>
+
+</body>
+</html>
