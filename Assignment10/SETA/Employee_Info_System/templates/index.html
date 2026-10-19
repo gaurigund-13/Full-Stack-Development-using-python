@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Information Form</title>
+</head>
+<body>
+
+<h2>Employee Information Form</h2>
+
+<form method="POST">
+
+    Employee ID:
+    <input type="number" name="Employee_ID" required>
+    <br><br>
+
+    Employee Name:
+    <input type="text" name="Name" required>
+    <br><br>
+
+    Department:
+    <input type="text" name="Department" required>
+    <br><br>
+
+    <input type="submit" value="Submit">
+
+</form>
+
+<h3>{{ msg }}</h3>
+
+{% if emp %}
+    <h3>Entered Employee Information</h3>
+
+    <p>Employee ID: {{ emp[0] }}</p>
+    <p>Employee Name: {{ emp[1] }}</p>
+    <p>Department: {{ emp[2] }}</p>
+{% endif %}
+
+</body>
+</html>

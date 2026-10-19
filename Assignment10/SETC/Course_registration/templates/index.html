@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Registration Form</title>
+</head>
+<body>
+
+<h2>Course Registration Form</h2>
+
+<form method="POST">
+
+    Student Name:
+    <input type="text" name="Student_Name" required>
+    <br><br>
+
+    Email:
+    <input type="text" name="Email" required>
+    <br><br>
+
+    Course Name:
+    <input type="text" name="Course_Name" required>
+    <br><br>
+
+    <input type="submit" value="Register">
+
+</form>
+
+<h3>{{ msg }}</h3>
+
+<hr>
+
+<h2>Registered Students</h2>
+
+<table border="1" cellpadding="8">
+    <tr>
+        <th>Registration ID</th>
+        <th>Student Name</th>
+        <th>Email</th>
+        <th>Course Name</th>
+    </tr>
+
+    {% for s in students %}
+    <tr>
+        <td>{{ s[0] }}</td>
+        <td>{{ s[1] }}</td>
+        <td>{{ s[2] }}</td>
+        <td>{{ s[3] }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+</body>
+</html>
